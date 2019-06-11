@@ -1,4 +1,4 @@
-package nettydemo;
+package socketdemo;
 
 import static org.junit.Assert.assertTrue;
 

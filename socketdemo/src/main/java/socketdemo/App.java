@@ -1,4 +1,4 @@
-package nettydemo;
+package socketdemo;
 
 /**
  * Hello world!
