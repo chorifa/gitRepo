@@ -1,1 +1,2 @@
-# gitRepo
+#some demos when learning netty.
+--------------------------------
