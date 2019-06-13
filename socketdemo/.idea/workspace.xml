@@ -2,40 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e80b659-8893-4cf3-b445-767c7d96ee95" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nettydemo/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nettydemo/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nettydemo/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nettydemo/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nettydemo/nettydemo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nettydemo/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nettydemo/src/main/java/nettydemo/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nettydemo/src/main/java/nettydemo/NettyNioClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nettydemo/src/main/java/nettydemo/NettyNioServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nettydemo/src/test/java/nettydemo/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nettydemo/target/classes/nettydemo/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nettydemo/target/classes/nettydemo/NettyNioClient$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nettydemo/target/classes/nettydemo/NettyNioClient$NioClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nettydemo/target/classes/nettydemo/NettyNioClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nettydemo/target/classes/nettydemo/NettyNioServer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nettydemo/target/classes/nettydemo/NettyNioServer$NioServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nettydemo/target/classes/nettydemo/NettyNioServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nettydemo/target/test-classes/nettydemo/AppTest.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/protostuffDemo/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/protostuffDemo/ProtostuffDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/protostuffDemo/ProtostuffEncoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/protostuffDemo/ProtostuffUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/protostuffDemo/RequestExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/protostuffDemo/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/protostuffDemo/Starter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socketdemo/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socketdemo/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socketdemo/NettyNioClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socketdemo/NettyNioClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socketdemo/NettyNioServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socketdemo/NettyNioServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/socketdemo/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/socketdemo/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nettydemo/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nettydemo/NettyNioClient$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nettydemo/NettyNioClient$NioClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nettydemo/NettyNioClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nettydemo/NettyNioServer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nettydemo/NettyNioServer$NioServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nettydemo/NettyNioServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/nettydemo/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/socketdemo/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/socketdemo/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/socketdemo/NettyNioClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/socketdemo/NettyNioClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/socketdemo/NettyNioServer$NioServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/socketdemo/NettyNioServer$NioServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/socketdemo/NettyNioServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/socketdemo/NettyNioServer.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -52,36 +32,79 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/socketdemo/NettyNioServer.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/protostuffDemo/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="988">
+              <caret line="52" column="43" lean-forward="true" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#957#1706#0" expanded="true" />
-                <element signature="e#1705#1706#0" expanded="true" />
+                <element signature="e#1032#1946#0" expanded="true" />
+                <element signature="e#1945#1946#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/socketdemo/App.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/protostuffDemo/Starter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+            <state relative-caret-position="456">
+              <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/protostuffDemo/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1083">
+              <caret line="57" column="15" lean-forward="true" selection-start-line="57" selection-start-column="15" selection-end-line="57" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#773#1771#0" expanded="true" />
+                <element signature="e#1770#1771#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/socketdemo/NettyNioClient.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/protostuffDemo/ProtostuffUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="6" column="46" lean-forward="true" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+            <state relative-caret-position="171">
+              <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
               <folding>
-                <element signature="e#848#1771#0" expanded="true" />
-                <element signature="e#1770#1771#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#291#321#0" expanded="true" />
+                <element signature="e#942#972#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/protostuffDemo/ProtostuffEncoder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#311#312#0" expanded="true" />
+                <element signature="e#351#352#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/protostuffDemo/ProtostuffDecoder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#335#336#0" expanded="true" />
+                <element signature="e#354#355#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,12 +125,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/nettydemo/nettyNioServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/nettydemo/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/nettydemo/NettyNioServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/nettydemo/NettyNioClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/socketdemo/App.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/protostuffDemo/RequestExample.java" />
+        <option value="$PROJECT_DIR$/src/main/java/protostuffDemo/Server.java" />
+        <option value="$PROJECT_DIR$/src/main/java/protostuffDemo/ProtostuffUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/protostuffDemo/ProtostuffEncoder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/protostuffDemo/ProtostuffDecoder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/protostuffDemo/Starter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/protostuffDemo/Client.java" />
       </list>
     </option>
   </component>
@@ -124,10 +154,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="203" />
-    <option name="y" value="27" />
-    <option name="width" value="1657" />
-    <option name="height" value="1045" />
+    <option name="x" value="704" />
+    <option name="width" value="1223" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -135,8 +164,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,16 +195,27 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="protostuffDemo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socketdemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="socketdemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="socketdemo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -191,7 +229,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Starter">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="socketdemo.App" />
       <module name="nettydemo" />
@@ -199,8 +237,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Starter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="protostuffDemo.Starter" />
+      <module name="nettydemo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Starter" />
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
@@ -216,16 +262,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23434903" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15884861" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32972974" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2918919" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28850326" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -342,17 +388,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.36.Final/netty-all-4.1.36.Final.jar!/io/netty/handler/codec/string/LineEncoder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="41" column="45" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="49" />
-          <folding>
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#881#882#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.36.Final/netty-all-4.1.36.Final.jar!/io/netty/handler/codec/Delimiters.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -384,33 +419,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/nettydemo/App.class" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="532">
+          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/nettydemo/App.class">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="314">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/protostuffDemo/RequestExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
-            <element signature="e#0#1363#0" expanded="true" />
+            <element signature="e#218#219#0" expanded="true" />
+            <element signature="e#250#251#0" expanded="true" />
+            <element signature="e#298#299#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#524#525#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#646#647#0" expanded="true" />
+            <element signature="e#692#693#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/socketdemo/App.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.36.Final/netty-all-4.1.36.Final.jar!/io/netty/handler/codec/string/LineEncoder.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        <state relative-caret-position="209">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          <folding>
+            <element signature="e#710#711#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/socketdemo/NettyNioServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="621">
+          <caret line="76" column="24" lean-forward="true" selection-start-line="75" selection-start-column="12" selection-end-line="76" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#957#1706#0" expanded="true" />
@@ -421,11 +480,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/socketdemo/NettyNioClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="6" column="46" lean-forward="true" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+        <state relative-caret-position="203">
+          <caret line="28" column="95" selection-start-line="28" selection-start-column="73" selection-end-line="28" selection-end-column="95" />
           <folding>
-            <element signature="e#848#1771#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/socketdemo/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="38" column="23" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/protostuffDemo/ProtostuffEncoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#351#352#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/protostuffDemo/ProtostuffDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#335#336#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/protostuffDemo/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="988">
+          <caret line="52" column="43" lean-forward="true" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1032#1946#0" expanded="true" />
+            <element signature="e#1945#1946#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/protostuffDemo/Starter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/protostuffDemo/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1083">
+          <caret line="57" column="15" lean-forward="true" selection-start-line="57" selection-start-column="15" selection-end-line="57" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#773#1771#0" expanded="true" />
             <element signature="e#1770#1771#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/protostuffDemo/ProtostuffUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#291#321#0" expanded="true" />
+            <element signature="e#942#972#1" expanded="true" />
           </folding>
         </state>
       </provider>
