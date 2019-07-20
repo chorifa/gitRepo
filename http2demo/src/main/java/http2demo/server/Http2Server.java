@@ -14,7 +14,7 @@ import io.netty.handler.ssl.util.SelfSignedCertificate;
 
 public final class Http2Server {
 
-    static final boolean SSL = true;
+    static final boolean SSL = false;
 
     static final int PORT = SSL? 8443 : 8080;
 

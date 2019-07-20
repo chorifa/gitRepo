@@ -22,7 +22,7 @@ import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
 
 public class Http2Client {
 
-    static final boolean SSL = true;
+    static final boolean SSL = false;
     static final String HOST = "localhost";
     static final int PORT = SSL?8443:8080;
     static final String URL = "/get";
@@ -64,7 +64,7 @@ public class Http2Client {
             http2SettingsHandler.awaitSettings(5, TimeUnit.SECONDS);
 
             HttpResponseHandler responseHandler = initializer.responseHandler();
-            int streamId = 5;
+            int streamId = 3;
             HttpScheme scheme = SSL ? HttpScheme.HTTPS : HttpScheme.HTTP;
             AsciiString hostName = new AsciiString(HOST + ':' + PORT);
             System.err.println("Sending request(s)...");
