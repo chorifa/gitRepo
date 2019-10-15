@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="600f588b-0736-44ac-9b89-c3f93390b90f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../http2demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../http2demo/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/niosocket/NioClientStarter$NioClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/niosocket/NioClientStarter$NioClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/niosocket/NioServerStarter$NioServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/niosocket/NioServerStarter$NioServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/niosocket/NioServerStarter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/niosocket/NioServerStarter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NioServerStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NioServerStarter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../socketdemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../socketdemo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socketdemo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../socketdemo/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +38,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../socketdemo/pom.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
