@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.net.StandardSocketOptions;
 import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
@@ -13,32 +14,41 @@ import java.util.Set;
 public class NioServerStarter {
     public static void main(String[] args){
         int port = 8088;
-        NioServer nioServer = new NioServer(port);
-        new Thread(nioServer).start();
+        // re-use-port option
+        NioServer nioServer1 = new NioServer(port, "NIO-Server-1");
+        NioServer nioServer2 = new NioServer(port, "NIO-Server-2");
+        new Thread(nioServer1).start();
+        new Thread(nioServer2).start();
         try {
             Thread.sleep(10000);
         }catch (InterruptedException e){
             e.printStackTrace();
         }finally {
             System.out.println("close server manually.");
-            nioServer.setStop();
+            nioServer1.setStop();
+            nioServer2.setStop();
         }
     }
 
     static class NioServer implements Runnable{
 
+        private String name;
+
         private Selector selector;
 
         private volatile boolean stop = false;
 
-        NioServer (int port){
+        NioServer (int port, String name){
+            this.name = name;
             try{
                 selector = Selector.open();
                 ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
                 serverSocketChannel.configureBlocking(false);
-                serverSocketChannel.socket().bind(new InetSocketAddress(port),1024);
+                // re-use-port option
+                serverSocketChannel.setOption(StandardSocketOptions.SO_REUSEPORT, true);
+                serverSocketChannel.bind(new InetSocketAddress(port),1024);
                 serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
-                System.out.println("server is open in port: "+port+" waiting for connection...");
+                System.out.println("server [" +name+"] is open on port: "+port+" waiting for connection...");
             }catch (IOException e){
                 e.printStackTrace();
                 System.exit(1);
@@ -99,7 +109,7 @@ public class NioServerStarter {
                         byte[] bytes = new byte[byteBuffer.remaining()];
                         byteBuffer.get(bytes);
                         String str = new String(bytes, StandardCharsets.UTF_8);
-                        System.out.println("server received order: "+str);
+                        System.out.println("server ["+name+"] received order: "+str);
                         String ans;
                         switch (str){
                             case "order time" :

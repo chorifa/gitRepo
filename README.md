@@ -1,2 +1,2 @@
-#some demos when learning netty.
+some demos when learning netty.
 --------------------------------
