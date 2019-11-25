@@ -81,8 +81,9 @@ public class NioClientStarter {
             }
             if(selector != null) {
                 try {
+                    Thread.sleep(10*1000); // 10s
                     selector.close();
-                } catch (IOException e) {
+                } catch (IOException | InterruptedException e) {
                     e.printStackTrace();
                 }
             }

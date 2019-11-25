@@ -7,6 +7,7 @@ import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayDeque;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
@@ -20,7 +21,7 @@ public class NioServerStarter {
         new Thread(nioServer1).start();
         new Thread(nioServer2).start();
         try {
-            Thread.sleep(10000);
+            Thread.sleep(30*1000); // 30s
         }catch (InterruptedException e){
             e.printStackTrace();
         }finally {
@@ -124,7 +125,8 @@ public class NioServerStarter {
                         writeResponse(sc,ans);
                     }else if(readBytes < 0){
                         key.cancel();
-                        sc.close();
+                        //TODO if not close . CLOSE_WAIT
+                        sc.close();  // what if not close?
                     }// 0 忽略
                 }
             }

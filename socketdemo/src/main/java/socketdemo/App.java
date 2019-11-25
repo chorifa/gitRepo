@@ -7,10 +7,11 @@ package socketdemo;
 public class App {
     public static void main( String[] args ) throws Exception {
         System.out.println( "Hello World!" );
+        final NettyNioServer nioServer = new NettyNioServer();
         Thread server = new Thread(()->{
             try{
                 System.out.println("server init.");
-                new NettyNioServer().init(8088);
+                nioServer.init(8088);
             }catch (Exception e){
                 e.printStackTrace();
             }
@@ -34,10 +35,16 @@ public class App {
                 e.printStackTrace();
             }
         });
-        client1.start();
-        client2.start();
-        client1.join();
-        client2.join();
-        server.join();
+        try{
+            client1.start();
+            client2.start();
+            client1.join();
+            client2.join();
+            server.join();
+            Thread.sleep(60*1000);
+        }finally {
+            client.getGroup().shutdownGracefully();
+            nioServer.shutdown();
+        }
     }
 }

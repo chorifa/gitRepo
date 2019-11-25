@@ -15,35 +15,37 @@ import java.nio.charset.StandardCharsets;
 
 class NettyNioClient {
 
-    void connect(int port, String host, String order) throws Exception{
-        EventLoopGroup group = new NioEventLoopGroup();
-        try{
-            Bootstrap bs = new Bootstrap();
-            bs.group(group).channel(NioSocketChannel.class)
-              .option(ChannelOption.TCP_NODELAY,true)
-              .handler(new ChannelInitializer<SocketChannel>(){
-                  @Override
-                  protected void initChannel(SocketChannel socketChannel) throws Exception {
-                      ByteBuf delimiters = Unpooled.copiedBuffer("$$".getBytes());
-                      socketChannel.pipeline()//.addLast(new LineBasedFrameDecoder(512))
-                                              //.addLast(new LineEncoder(LineSeparator.DEFAULT))
-                                              .addLast(new DelimiterBasedFrameDecoder(512,delimiters))
-                                              .addLast(new StringDecoder(StandardCharsets.UTF_8))
-                                              .addLast(new StringEncoder(StandardCharsets.UTF_8))
-                                              // StringEncoder和LineEncoder功能有重复
-                                              .addLast(new NioClient(order));
-                  }
-              });
-            ChannelFuture channelFuture = bs.connect(host,port).sync();
-            System.out.println("client connect done. try to do sth.");
-            channelFuture.channel().closeFuture().sync();
-        }finally {
-            System.out.println("client close...");
-            group.shutdownGracefully();
-        }
+    private EventLoopGroup group = new NioEventLoopGroup(2);
+
+    public EventLoopGroup getGroup() {
+        return group;
     }
 
-    private class NioClient extends ChannelInboundHandlerAdapter {
+    void connect(int port, String host, String order) throws Exception{
+        Bootstrap bs = new Bootstrap();
+        bs.group(group).channel(NioSocketChannel.class)
+                .option(ChannelOption.TCP_NODELAY, true)
+                .handler(new ChannelInitializer<SocketChannel>() {
+                    @Override
+                    protected void initChannel(SocketChannel socketChannel) throws Exception {
+                        ByteBuf delimiters = Unpooled.copiedBuffer("$$".getBytes());
+                        socketChannel.pipeline()//.addLast(new LineBasedFrameDecoder(512))
+                                //.addLast(new LineEncoder(LineSeparator.DEFAULT))
+                                .addLast(new DelimiterBasedFrameDecoder(512, delimiters))
+                                .addLast(new StringDecoder(StandardCharsets.UTF_8))
+                                .addLast(new StringEncoder(StandardCharsets.UTF_8))
+                                // StringEncoder和LineEncoder功能有重复
+                                .addLast(new NioClient(order));
+                    }
+                });
+        ChannelFuture channelFuture = bs.connect(host, port).sync();
+        System.out.println("client connect done. try to do sth. ->> sleep 30s");
+        Thread.sleep(10 * 1000); // 30s
+        System.out.println("channel close");
+        channelFuture.channel().close();
+    }
+
+    private static class NioClient extends ChannelInboundHandlerAdapter {
 
         private String order;
 
@@ -61,8 +63,9 @@ class NettyNioClient {
              */
             // 给了String encoder可以不用转为byteBuf
             // 如果不用LineEncoder，写的时候还需要手动添加换行符
-            System.out.println("client write and flush order: "+order);
-            ctx.writeAndFlush(order+"$$");
+            System.out.println("client : channel active");
+//            System.out.println("client write and flush order: "+order);
+//            ctx.writeAndFlush(order+"$$");
         }
 
         @Override
@@ -75,7 +78,6 @@ class NettyNioClient {
              */
             String ans = (String) msg;
             System.out.println("client get answer: "+ans);
-            ctx.close();
         }
 
         @Override

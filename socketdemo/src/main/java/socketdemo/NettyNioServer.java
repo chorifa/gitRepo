@@ -16,37 +16,52 @@ import java.util.Date;
 
 class NettyNioServer {
 
-    void init(int port) throws Exception{
-        EventLoopGroup bossGroup = new NioEventLoopGroup();
-        EventLoopGroup workGroup = new NioEventLoopGroup();
-        try{
-            ServerBootstrap sbs = new ServerBootstrap();
-            sbs.group(bossGroup,workGroup).channel(NioServerSocketChannel.class)
-               .option(ChannelOption.SO_BACKLOG,1024)
-               .childHandler(new ChannelInitializer<SocketChannel>(){
-                   @Override
-                   protected void initChannel(SocketChannel socketChannel) throws Exception {
-                       ByteBuf delimiter = Unpooled.copiedBuffer("$$".getBytes());
-                       socketChannel.pipeline()//.addLast(new LineBasedFrameDecoder(512))
-                                               .addLast(new DelimiterBasedFrameDecoder(512,delimiter))
-                                               .addLast(new StringDecoder(StandardCharsets.UTF_8))
-                                               .addLast(new StringEncoder(StandardCharsets.UTF_8))
-                                               .addLast(new NioServer());
-                   }
-               });
-            ChannelFuture channelFuture = sbs.bind(port).sync();
-            System.out.println("server bind done. try to do sth.");
-            channelFuture.channel().closeFuture().sync(); // wait for closing server
-        }finally {
-            System.out.println("server close...");
-            bossGroup.shutdownGracefully();
-            workGroup.shutdownGracefully();
-        }
+    private EventLoopGroup bossGroup = new NioEventLoopGroup(1);
+    private EventLoopGroup workGroup = new NioEventLoopGroup(2);
+
+    void shutdown(){
+        bossGroup.shutdownGracefully();
+        workGroup.shutdownGracefully();
+        System.out.println("Server shut down.");
     }
 
-    private class NioServer extends ChannelInboundHandlerAdapter{
+    void init(int port) throws InterruptedException {
+        ServerBootstrap sbs = new ServerBootstrap();
+        sbs.group(bossGroup,workGroup).channel(NioServerSocketChannel.class)
+           .option(ChannelOption.SO_BACKLOG,1024)
+           .childHandler(new ChannelInitializer<SocketChannel>(){
+               @Override
+               protected void initChannel(SocketChannel socketChannel) throws Exception {
+                   ByteBuf delimiter = Unpooled.copiedBuffer("$$".getBytes());
+                   socketChannel.pipeline()//.addLast(new LineBasedFrameDecoder(512))
+//                                           .addLast(new DelimiterBasedFrameDecoder(512,delimiter))
+//                                           .addLast(new StringDecoder(StandardCharsets.UTF_8))
+//                                           .addLast(new StringEncoder(StandardCharsets.UTF_8))
+                                           .addLast(new NioServer());
+               }
+           });
+        ChannelFuture channelFuture = sbs.bind(port).sync();
+        System.out.println("server bind done. try to do sth.");
+    }
+
+    private static class NioServer extends ChannelInboundHandlerAdapter{
+        @Override
+        public void channelInactive(ChannelHandlerContext ctx) throws Exception {
+            // 这个时候已经断开了
+            System.out.println("server detect: channel inactive.");
+//            try {
+//                Thread.sleep(20*1000); //20s
+//            }catch (InterruptedException ignore){}
+            super.channelInactive(ctx);
+        }
+
         @Override
         public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+            try {
+                System.out.println("do channel read.");
+                Thread.sleep(20*1000); //20s
+            }catch (InterruptedException ignore){}
+
             /*
             ByteBuf byteBuf = (ByteBuf)msg;
             byte[] bytes = new byte[byteBuf.readableBytes()];
@@ -73,13 +88,18 @@ class NettyNioServer {
 
         @Override
         public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
-            System.out.println("server read done. flush");
+            // 上边的read 没有触发
+            try {
+                System.out.println("do channel read complete."); // 这里还没有断开
+                Thread.sleep(20*1000); //20s
+            }catch (InterruptedException ignore){}
+            System.out.println("server read done. channel active? " + ctx.channel().isActive());
             ctx.flush();
         }
 
         @Override
         public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-            ctx.close();
+            //ctx.close();
         }
     }
 }

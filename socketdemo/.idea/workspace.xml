@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e80b659-8893-4cf3-b445-767c7d96ee95" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../http2demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../http2demo/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../niosocket/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../niosocket/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../niosocket/src/NioClientStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../niosocket/src/NioClientStarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../niosocket/src/NioServerStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../niosocket/src/NioServerStarter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socketdemo/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socketdemo/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socketdemo/NettyNioClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socketdemo/NettyNioClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socketdemo/NettyNioServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socketdemo/NettyNioServer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +63,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Starter">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="socketdemo.App" />
       <module name="nettydemo" />
@@ -77,8 +80,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Starter" />
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.Starter" />
       </list>
     </recent_temporary>
   </component>
